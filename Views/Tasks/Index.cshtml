@@ -1,0 +1,35 @@
+@model List<TaskManager.Models.TaskItem>
+
+    <div class="max-w-3xl mx-auto p-6">
+        <h2 class="text-2xl font-bold mb-4">任務清單</h2>
+        <a asp-action="Create" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:bg-indigo-700 mb-4">新增任務</a>
+
+        @if (!Model.Any())
+    {
+        <div class="p-4 bg-yellow-100 text-yellow-800 rounded-lg">目前沒有任務。</div>
+    }
+    else
+    {
+        <table class="min-w-full border-collapse bg-white shadow rounded-lg overflow-hidden">
+            <thead class="bg-slate-800 text-white">
+                <tr>
+                    <th class="px-4 py-2 text-left">標題</th>
+                    <th class="px-4 py-2 text-left">狀態</th>
+                    <th class="px-4 py-2 text-left">優先級</th>
+                    <th class="px-4 py-2 text-left">截止日</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model)
+            {
+                <tr class="border-b hover:bg-slate-50">
+                    <td class="px-4 py-2">@task.Title</td>
+                    <td class="px-4 py-2">@task.Status</td>
+                    <td class="px-4 py-2">@task.Priority</td>
+                    <td class="px-4 py-2">@task.DueDate?.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+    </div>
