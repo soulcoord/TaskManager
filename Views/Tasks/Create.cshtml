@@ -1,0 +1,28 @@
+@model TaskManager.Models.TaskItem
+
+<h2>新增任務</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>標題</label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label>描述</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <div>
+        <label>截止日</label>
+        <input asp-for="DueDate" type="date" />
+    </div>
+    <div>
+        <label>優先級</label>
+        <select asp-for="Priority" asp-items="Html.GetEnumSelectList<TaskManager.Models.TaskPriority>()"></select>
+    </div>
+    <div>
+        <label>狀態</label>
+        <select asp-for="Status" asp-items="Html.GetEnumSelectList<TaskManager.Models.TaskStatus>()"></select>
+    </div>
+    <button type="submit">新增</button>
+</form>
