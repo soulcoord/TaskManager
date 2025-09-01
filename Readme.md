@@ -1,86 +1,76 @@
 
-# TaskManager Œ£°¸ 
 
-Ò»‚€ÓÃ **ASP.NET Core MVC** é_°lµÄÈÎ„Õ¹ÜÀíÏµ½y¹ Àı£¬
-Ä¿Ç°¹¦ÄÜ°üº¬ **ÈÎ„ÕÇå†Îï@Ê¾** ÒÔ¼° **ĞÂÔöÈÎ„Õ**£¬Ê¹ÓÃ **Entity Framework Core (InMemory)** ×÷éÙYÁÏ´æÈ¡¡£
+# TaskManager å°ˆæ¡ˆ 
+
+ä¸€å€‹ç”¨ **ASP.NET Core MVC** é–‹ç™¼çš„ä»»å‹™ç®¡ç†ç³»çµ±ç¯„ä¾‹ï¼Œ
+ç›®å‰åŠŸèƒ½åŒ…å« **ä»»å‹™æ¸…å–®é¡¯ç¤º** ä»¥åŠ **æ–°å¢ä»»å‹™**ï¼Œä½¿ç”¨ **Entity Framework Core (InMemory)** ä½œç‚ºè³‡æ–™å­˜å–ã€‚
 
 ---
 
-## ?? Œ£°¸½Y˜‹
+## å°ˆæ¡ˆçµæ§‹
 
 ```
 TaskManager/
-©À©¤©¤ Controllers/
-©¦   ©¸©¤©¤ TasksController.cs   # ¿ØÖÆÁ÷³Ì£¬ÌÀíÈÎ„ÕÇå†Î¡¢ĞÂÔö
-©À©¤©¤ Data/
-©¦   ©¸©¤©¤ AppDbContext.cs      # ÙYÁÏìßB¾€Åc DbSet ÔO¶¨
-©À©¤©¤ Models/
-©¦   ©¸©¤©¤ TaskItem.cs          # ÈÎ„ÕÄ£ĞÍ (Title, Description, Status, Priority...)
-©À©¤©¤ Views/
-©¦   ©¸©¤©¤ Tasks/
-©¦       ©À©¤©¤ Index.cshtml     # ÈÎ„ÕÇå†Îí“Ãæ
-©¦       ©¸©¤©¤ Create.cshtml    # ĞÂÔöÈÎ„Õí“Ãæ
-©À©¤©¤ Program.cs               # Œ£°¸ßMÈëüc£¬Ô]ƒÔ·ş„ÕÅcÂ·ÓÉ
-©¸©¤©¤ TaskManager.csproj       # Œ£°¸™n
+â”œâ”€â”€ Controllers/
+â”‚   â””â”€â”€ TasksController.cs   # æ§åˆ¶æµç¨‹ï¼Œè™•ç†ä»»å‹™æ¸…å–®ã€æ–°å¢
+â”œâ”€â”€ Data/
+â”‚   â””â”€â”€ AppDbContext.cs      # è³‡æ–™åº«é€£ç·šèˆ‡ DbSet è¨­å®š
+â”œâ”€â”€ Models/
+â”‚   â””â”€â”€ TaskItem.cs          # ä»»å‹™æ¨¡å‹ (Title, Description, Status, Priority...)
+â”œâ”€â”€ Views/
+â”‚   â””â”€â”€ Tasks/
+â”‚       â”œâ”€â”€ Index.cshtml     # ä»»å‹™æ¸…å–®é é¢
+â”‚       â””â”€â”€ Create.cshtml    # æ–°å¢ä»»å‹™é é¢
+â”œâ”€â”€ Program.cs               # å°ˆæ¡ˆé€²å…¥é»ï¼Œè¨»å†Šæœå‹™èˆ‡è·¯ç”±
+â””â”€â”€ TaskManager.csproj       # å°ˆæ¡ˆæª”
 ```
 
 ---
 
-## ?? ¼¼Ğg—£
+## æŠ€è¡“æ£§
 
 * **ASP.NET Core MVC 9.0**
-* **Entity Framework Core (InMemory)** ¡ª ·½±ã±¾µØ¿ìËÙœyÔ‡
-* **Razor View** ¡ª ®‹ÃæäÖÈ¾
+* **Entity Framework Core (InMemory)** â€” æ–¹ä¾¿æœ¬åœ°å¿«é€Ÿæ¸¬è©¦
+* **Razor View** â€” ç•«é¢æ¸²æŸ“
 * **C# 9.0**
 
 ---
 
-## ?? Ê¹ÓÃ·½·¨
+## ä½¿ç”¨æ–¹æ³•
 
-1. ´_ÕJÒÑ°²Ñb [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+1. ç¢ºèªå·²å®‰è£ [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 
-2. Clone Œ£°¸KßMÈëÄ¿ä›
+2. Clone å°ˆæ¡ˆä¸¦é€²å…¥ç›®éŒ„
 
    ```bash
-   git clone <ÄãµÄŒ£°¸¾WÖ·>
+   git clone <ä½ çš„å°ˆæ¡ˆç¶²å€>
    cd TaskManager
    ```
 
-3. °²ÑbÌ×¼ş
+3. å®‰è£å¥—ä»¶
 
    ```bash
    dotnet restore
    ```
 
-4. ˆÌĞĞŒ£°¸
+4. åŸ·è¡Œå°ˆæ¡ˆ
 
    ```bash
    dotnet run
    ```
 
-5. ´òé_gÓ[Æ÷£¬ßMÈë£º
+5. æ‰“é–‹ç€è¦½å™¨ï¼Œé€²å…¥ï¼š
 
    ```
    https://localhost:xxxx/Tasks/Index
    ```
 
-   £¨xxxx ÒÀˆÌĞĞ•rï@Ê¾µÄ port ¶ø¶¨£©
+   ï¼ˆxxxx ä¾åŸ·è¡Œæ™‚é¡¯ç¤ºçš„ port è€Œå®šï¼‰
 
 ---
 
-## ? ¹¦ÄÜ
+## åŠŸèƒ½
 
-* ²é¿´ÈÎ„ÕÇå†Î
-* ĞÂÔöÈÎ„Õ£¨˜Ëî}¡¢ÃèÊö¡¢½ØÖ¹ÈÕ¡¢ƒÏÈ¼‰¡¢ î‘B£©
+* æŸ¥çœ‹ä»»å‹™æ¸…å–®
+* æ–°å¢ä»»å‹™ï¼ˆæ¨™é¡Œã€æè¿°ã€æˆªæ­¢æ—¥ã€å„ªå…ˆç´šã€ç‹€æ…‹ï¼‰
 
----
-
-## ?? ´ıŞkÊÂí—
-
-* [ ] ¾İ‹ÈÎ„Õ
-* [ ] „h³ıÈÎ„Õ
-* [ ] ¼ÓÈëÊ¹ÓÃÕßò×C
-* [ ] “Q³É SQL Server »ò SQLite ƒ¦´æÙYÁÏ
-* [ ] ÃÀ»¯ UI£¨Bootstrap / Tailwind£©
-
-
