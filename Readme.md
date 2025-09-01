@@ -43,7 +43,7 @@ TaskManager/
 2. Clone 專案並進入目錄
 
    ```bash
-   git clone <你的專案網址>
+   git clone https://github.com/soulcoord/TaskManager.git
    cd TaskManager
    ```
 
@@ -73,5 +73,6 @@ TaskManager/
 
 * 查看任務清單
 * 新增任務（標題、描述、截止日、優先級、狀態）
+
 
 
