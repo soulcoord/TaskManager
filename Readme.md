@@ -12,17 +12,17 @@
 ```
 TaskManager/
 ├── Controllers/
-│   └── TasksController.cs   # 控制流程，處理任務清單、新增
+│   └── TasksController.cs
 ├── Data/
-│   └── AppDbContext.cs      # 資料庫連線與 DbSet 設定
+│   └── AppDbContext.cs
 ├── Models/
-│   └── TaskItem.cs          # 任務模型 (Title, Description, Status, Priority...)
+│   └── TaskItem.cs
 ├── Views/
 │   └── Tasks/
-│       ├── Index.cshtml     # 任務清單頁面
-│       └── Create.cshtml    # 新增任務頁面
-├── Program.cs               # 專案進入點，註冊服務與路由
-└── TaskManager.csproj       # 專案檔
+│       ├── Index.cshtml
+│       └── Create.cshtml
+├── Program.cs
+└── TaskManager.csproj
 ```
 
 ---
@@ -73,4 +73,5 @@ TaskManager/
 
 * 查看任務清單
 * 新增任務（標題、描述、截止日、優先級、狀態）
+
 
